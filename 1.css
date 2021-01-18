@@ -1,0 +1,156 @@
+:root {
+    --blue:#1F4CFF;
+    --pink: #e7068a;
+    --off-white: #EBECF0;
+
+    --background: var(--off-white);
+    --button: var(--background);
+    --scrollbar: var(--blue);
+    --selection: var(--blue);
+}
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+body
+{
+    padding: 0px;
+    margin: 0px;
+    background-color: var(--background);
+    color: #000000;
+
+    font-family: 'Inconsolata', monospace;
+    box-sizing: border-box;
+}
+
+.container
+{
+    height: 100vh;
+    background-color: var(--background);
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.anchor
+{
+    min-height: 20px;
+}
+
+a
+{
+    width:fit-content;
+    padding: 15px 25px 15px 25px;
+    border: none;
+    border-radius: 50px;
+    background: var(--button);
+    box-shadow: -5px -5px 5px #FFFFFF, 5px 5px 15px #A8B1D6;
+    margin-top: 20px;
+    margin-right: 20px;
+    white-space: nowrap;
+
+    font-family: 'Inconsolata', monospace;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+}
+
+a:hover
+{
+    font-style: italic;
+}
+
+a:active {
+    box-shadow: none;
+    box-shadow: inset -5px -5px 4px #FFFFFF, inset 3px 3px 10px #A8B1D6;
+    transform: translateY(2px);
+    text-decoration: underline;
+}
+
+.navigation
+{
+    margin-top: 10vh;
+    line-height: 75px;
+}
+
+#button-uiux
+{
+    color: var(--pink);
+}
+
+h1
+{   
+    font-size: 30px;
+    color: var(--blue);
+    margin: 0px;
+}
+
+h2
+{
+    font-size: 25px;
+    text-decoration: underline;
+    margin-bottom: 0px;
+}
+
+h3
+{
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 25px;
+}
+
+
+.column
+{
+    display: grid;
+
+    max-width: 50vw;
+    max-height: 100vh;
+    background-color: transparent;
+
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+    margin-left: 15vw;
+}
+
+.project-card
+{
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+
+
+::selection {
+    background: var(--selection); /* WebKit/Blink Browsers */
+    color: var(--background);
+  }
+::-moz-selection {
+    background: var(--selection); /* Gecko Browsers */
+    color: var(--background);
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 7px;
+    background: #888;
+}
+  
+  /* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+  
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar);
+    border-radius: 10px;
+}
+  
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
