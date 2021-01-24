@@ -30,59 +30,53 @@
     <div class="container">⠀
         <div class="column">
             <h1 id="hello"></h1>
-            <h3>I'm a third year Computer Science student in De La Salle University, Manila, who's interested in UI/UX and visual design. Currently, I'm the Publicity and Creatives Vice President of the home org of College of Computer Studies, La Salle Computer Society, and Design Lead of Developer Student Club Taft.</h3>
+            <h3>I'm a third year Computer Science student in De La Salle University, Manila, who's interested in UI/UX and visual design.</h3>
             <div class="navigation unselectable">
-                <a id="button-uiux" href="#uiux">UI/UX</a>
-                <a id="button-uiux" href="#webdev">Web Development</a>
-                <a id="button-uiux" href="#3dmodelling">3D modelling</a>
-                <a id="button-uiux" href="#art">Art</a>
+                <a id="button-uiux" href="#projects">Projects</a>
+                <!-- <a id="button-uiux" href="#art">Resume</a>-->
+                <a id="button-uiux" href="#projects">Art and Design</a>
+                <a id="button-uiux" href="#contact">About Me + Contact</a>
             </div>
         </div>
     </div>
     <div>
-        <div id="uiux" class="anchor"></div>
-        <div class="section">
-            <h1>UI/UX</h1>
+        <div id="projects" class="anchor"></div>
+        <div class="section project">
+            <h1>Projects</h1>
+            <a class="unselectable" href="/projects.html">View all projects ➔</a>
             <div class="project-card">
+                <img src="/assets/canvas.png" class="image">
                 <h2>Canvas Redesign</h2>
-                <h3>A case study on redesigning Canvas, one of the most popular learning platforms, and a close look on how to improve navigability, notifications, and assignment preparation. </h3>
-                <a class="unselectable">➔</a>
+                <div class="chip">UI/UX</div>  
+                <div class="chip">HCI</div>  
+                <div class="chip">Research</div>  
+                <h3>A case study on redesigning Canvas, one of the most popular e-learning platforms, and a close look on how to improve navigability, notifications, and assignment preparation. </h3>
+                <div class="navigation">
+                    <a class="unselectable">➔</a>
+                </div>
             </div>
             <div class="project-card">
+                <img src="/assets/mangan.png" class="image">
+                <h2>Dethroneco</h2>
+                <div class="chip">Web Development</div>
+                <h3>A classic e-commerce web application built from scratch in a remote team of 5.</h3>
+            </div>
+            <div class="project-card">
+                <img src="/assets/mangan.png" class="image">
                 <h2>Mangan Tayon - a Filipino-centric cooking/recipe app</h2>
+                <div class="chip">UI/UX</div>  
                 <h3>Gamifying cooking and recipe applications to engage users and guide newbies how to cook step-by-step (and promote Filipino cuisine!).</h3>
             </div>
-            <div class="project-card">
-                <h2>Online Chess UI (Neumorphism)</h2>
-                <h3>An attempt at one of the most popular trends in UI in 2020 - Neumorphism - on online chess.</h3>
-            </div>
-            <div class="project-card">
-                <h2>DSC-Taft's Online Recruitment Page</h2>
-                <h3>A one-page static website to recruit members for one of my orgs, Developer Student Club Taft.</h3>
-            </div>
         </div>
 
-        <div id="webdev" class="anchor"></div>
+        <div id="contact" class="anchor"></div>
         <div class="section">
-            <h1>Website Development</h1>
-            <div class="project-card">
-                <h2>Canvas Redesign</h2>
-                <h3>A case study on redesigning Canvas, one of the most popular learning platforms, and a close look on how to improve navigability, notifications, and assignment preparation. </h3>
-                <a id="button-uiux" href="">➔</a>
-            </div>
-        </div>
-
-
-        <div id="3dmodelling" class="anchor"></div>
-        <div class="section">
-            <h1>3D Modelling</h1>
-            <div class="project-card">
-                <h2>Student's Nook - our org safespace</h2>
-                <h3>My earliest output after venturing into 3D modelling—an isometric 3D render of the Student's Nook, which is my home org's office-slash-safespace.</h3>
-            </div>
-            <div class="project-card">
-                <h2>Among Us</h2>
-                <h3>Another isometric 3D render of Among Us - electrical room.</h3>
+            <h1>About Me</h1>
+            <h3>I've held several design positions in different student organizaitons throughout my college experience. Currently, I'm the Publicity and Creatives Vice President of the home org of College of Computer Studies, La Salle Computer Society, and Design Lead of Developer Student Club Taft.</h3>
+            <div class="navigation">
+                <a class="square"><img class="icon"src="/assets/behance.png"></a>
+                <a class="square"><img class="icon"src="/assets/linkedin.png"></a>
+                <a class="square"><img class="icon"src="/assets/messenger.png"></a>
             </div>
         </div>
     </div>
@@ -92,7 +86,6 @@
 <script>
     function onLoad()
     {
-        //loadCSS();
         var i = 0;
         var txt = "Hello! I'm Sharmaine Gaw. :-)"; /* The text */
         var speed = 75; /* The speed/duration of the effect in milliseconds */
@@ -108,12 +101,4 @@
             }
         }
     }
-
-    /**function loadCSS() {
-        var sheet = document.createElement('link');
-        sheet.rel  = 'stylesheet';
-        sheet.href = (Math.floor(Math.random()*2)+1) + '.css';
-        console.log(sheet);
-        $("head").append(sheet);
-    }*/
 </script>
