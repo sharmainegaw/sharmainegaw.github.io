@@ -21,84 +21,148 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Karla&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Karla&display=swap" rel="stylesheet"> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
 
     <title>Sharmaine</title>
 
 </head>
-<body onload="onLoad()">
+<!-- <body onload="onLoad()"> -->
+<body>
     <div class="container">⠀
-        <div class="column">
-            <h1 id="hello"></h1>
-            <h3>I'm a third year Computer Science student in De La Salle University, Manila, who's interested in UI/UX and visual design.</h3>
-            <div class="navigation unselectable">
-                <a id="button-uiux" href="#projects">Projects</a>
-                <!-- <a id="button-uiux" href="#art">Resume</a>-->
-                <a id="button-uiux" href="#projects">Art and Design</a>
-                <a id="button-uiux" href="#contact">About Me + Contact</a>
-            </div>
-        </div>
-    </div>
-    <div>
-        <div id="projects" class="anchor"></div>
-        <div class="section project">
-            <h1>Projects</h1>
-            <a class="unselectable" href="/projects.html">View all projects ➔</a>
-            <div class="project-card">
-                <img src="/assets/canvas.png" class="image">
-                <h2>Canvas Redesign</h2>
-                <div class="chip">UI/UX</div>  
-                <div class="chip">HCI</div>  
-                <div class="chip">Research</div>  
-                <h3>A case study on redesigning Canvas, one of the most popular e-learning platforms, and a close look on how to improve navigability, notifications, and assignment preparation. </h3>
-                <div class="navigation">
-                    <a class="unselectable">➔</a>
+        <div class="hero-container">
+            <div class="hero-text">
+                <div id="hello" class="hero-title"></div>
+                <span class="hero-title">Hello!</span>
+                <br>
+                <span class="hero-title">I'm Sharmaine.</span>
+                <p>I'm a fourth year Computer Science student in De La Salle University, Manila, who's passionate about art, UI/UX, and visual design.</p>
+                <div class="navigation unselectable">
+                    <a id="button-uiux" href="#projects">Projects</a>
+                    <!-- <a id="button-uiux" href="#art">Resume</a>-->
+                    <a id="button-uiux" href="#projects">Art and Design</a>
                 </div>
             </div>
-            <div class="project-card">
-                <img src="/assets/mangan.png" class="image">
-                <h2>Dethroneco</h2>
-                <div class="chip">Web Development</div>
-                <h3>A classic e-commerce web application built from scratch in a remote team of 5.</h3>
-            </div>
-            <div class="project-card">
-                <img src="/assets/mangan.png" class="image">
-                <h2>Mangan Tayon - a Filipino-centric cooking/recipe app</h2>
-                <div class="chip">UI/UX</div>  
-                <h3>Gamifying cooking and recipe applications to engage users and guide newbies how to cook step-by-step (and promote Filipino cuisine!).</h3>
+            <img src="assets/face.png" class="hero-image">
+        </div>
+    </div>
+
+    <div id="projects" class="anchor"></div>
+    <div class="section project">
+        <h1>Here's what I've worked on!</h1>
+        <a class="unselectable" href="/projects.html">View all projects ➔</a>
+        <div class="project-card">
+            <img src="/assets/canvas.png" class="project-image">
+            <h2>Canvas Redesign</h2>
+            <div class="chip">UI/UX</div>  
+            <div class="chip">HCI</div>  
+            <div class="chip">Research</div>  
+            <p>A case study on redesigning Canvas, one of the most popular e-learning platforms, and a close look on how to improve navigability, notifications, and assignment preparation. </p>
+            <div class="navigation">
+                <a class="unselectable">➔</a>
             </div>
         </div>
-
-        <div id="contact" class="anchor"></div>
+        <div class="project-card">
+            <img src="/assets/mangan.png" class="project-image">
+            <h2>Dethroneco</h2>
+            <div class="chip">Web Development</div>
+            <p>A classic e-commerce web application built from scratch in a remote team of 5.</p>
+        </div>
+        <div class="project-card">
+            <img src="/assets/mangan.png" class="project-image">
+            <h2>Mangan Tayon - a Filipino-centric cooking/recipe app</h2>
+            <div class="chip">UI/UX</div>  
+            <p>Gamifying cooking and recipe applications to engage users and guide newbies how to cook step-by-step (and promote Filipino cuisine!).</p>
+        </div>
+    </div>
+    
+    <div class="container education">
         <div class="section">
-            <h1>About Me</h1>
-            <h3>I've held several design positions in different student organizaitons throughout my college experience. Currently, I'm the Publicity and Creatives Vice President of the home org of College of Computer Studies, La Salle Computer Society, and Design Lead of Developer Student Club Taft.</h3>
-            <div class="navigation">
-                <a class="square"><img class="icon"src="/assets/behance.png"></a>
-                <a class="square"><img class="icon"src="/assets/linkedin.png"></a>
-                <a class="square"><img class="icon"src="/assets/messenger.png"></a>
+            <h1>Education</h1>
+            
+            <div class="education-container">
+                <span>
+                    <h3>De La Salle University</h3>
+                    <p>— Bachelor of Science in Computer Science, Major in Software Technology</p>
+                </span>
+                <p>2019 — 2022</p>
+            </span>
             </div>
+            <hr>
+
+            <br>
+            <br>
+            <br>
+            
+            <h1>Experience</h1>
+            
+            <div class="education-container">
+                <span>
+                    <h3>La Salle Computer Society</h3>
+                    <p>— Vice President of Publicity and Creatives</p>
+                </span>
+                <p>2020 — 2021</p>
+            </div>
+            <hr>
+            <div class="education-container">
+                <span>
+                    <h3>Computer Studies Government</h3>
+                    <p>— Publicity and Creatives Executive</p>
+                </span>
+                <p>2019</p>
+            </div>
+            <hr>
+            <div class="education-container">
+                <span>
+                    <h3>Center For Complexity & Emerging Technologies</h3>
+                    <p>— Research Assisstant</p>
+                </span>
+                <p>2021 — 2022</p>
+            </div>
+            <hr>
+        </div>
+        <img src="assets/book.png" class="hero-image">
+    </div>
+    
+    <div class="contact-container">
+        <span>
+            <h1>Let's work together!</h1>
+            <div class="navigation unselectable">
+                <a href="mailto:sharmainegaw@gmail.com">sharmainegaw@gmail.com</a>
+            </div>
+            
+        </span>
+        <!-- <p>I've held several design positions in different student organizaitons throughout my college experience. Currently, I'm the Publicity and Creatives Vice President of the home org of College of Computer Studies, La Salle Computer Society, and Design Lead of Developer Student Club Taft.</p> -->
+        <div class="navigation">
+            <a class="square-button unselectable" target="_blank" href="" target="_blank"><img class="img-icon"src="/assets/icon-behance.png"></a>
+            <a class="square-button unselectable" target="_blank" href="https://www.linkedin.com/in/sharmaineg/"><img class="img-icon"src="/assets/icon-linkedin.png"></a>
+            <a class="square-button unselectable" target="_blank" href="https://m.me/sharmainegaw"><img class="img-icon"src="/assets/icon-messenger.png"></a>
+            <!-- <a class="square-button unselectable" href="mailto:sharmainegaw@gmail.com"><img class="img-icon"src="/assets/icon-gmail.webp"></a> -->
         </div>
     </div>
 </body>
 </html>
 
 <script>
-    function onLoad()
-    {
-        var i = 0;
-        var txt = "Hello! I'm Sharmaine Gaw. :-)"; /* The text */
-        var speed = 75; /* The speed/duration of the effect in milliseconds */
-        var field = $("#hello");
+    // function onLoad()
+    // {
+    //     var i = 0;
+    //     var txt = "Hello!\n I'm Sharmaine. :-)"; /* The text */
+    //     var speed = 75; /* The speed/duration of the effect in milliseconds */
+    //     var field = $("#hello");
 
-        typeWriter();
+    //     typeWriter();
 
-        function typeWriter() {
-            if (i < txt.length) {
-                field.append(txt.charAt(i));
-                i++;
-                setTimeout(typeWriter, speed);
-            }
-        }
-    }
+    //     function typeWriter() {
+    //         if (i < txt.length) {
+    //             field.append(txt.charAt(i));
+    //             i++;
+    //             setTimeout(typeWriter, speed);
+    //         }
+    //     }
+    // }
 </script>
