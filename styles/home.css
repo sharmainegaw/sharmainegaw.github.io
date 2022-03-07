@@ -1,16 +1,3 @@
-:root {
-  --blue:#1F4CFF;
-  --pink: #e7068a;
-  --off-white: #EBECF0;
-  --background: var(--off-white);
-  --button: var(--background);
-  --scrollbar: var(--blue);
-  --selection: black;
-  --paragraph: black;
-  --inner-shadow: inset -5px -5px 4px #FFFFFF, inset 3px 3px 10px #A8B1D6;
-  --drop-shadow: -5px -5px 5px #FFFFFF, 5px 5px 15px #A8B1D6;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -19,16 +6,34 @@ body {
   overflow-x: hidden;
   padding: 0px;
   margin: 0px;
-  background-color: var(--background);
-  color: var(--paragraph);
+  background-color: #EBECF0;
+  color: black;
   font-family: 'Source Sans Pro', sans-serif;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
+h1 {
+  font-family: 'League Gothic', sans-serif;
+  font-size: 60px;
+  color: #1F4CFF;
+  margin: 0px;
+}
+
+h2 {
+  font-size: 25px;
+  margin-bottom: 0px;
+}
+
+p {
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 25px;
+}
+
 .container {
   min-height: 100vh;
-  background-color: var(--background);
+  background-color: #EBECF0;
   margin: 0px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -45,9 +50,9 @@ a {
   padding: 15px 25px 15px 25px;
   border: none;
   border-radius: 50px;
-  background: var(--button);
-  -webkit-box-shadow: var(--drop-shadow);
-          box-shadow: var(--drop-shadow);
+  background: #EBECF0;
+  -webkit-box-shadow: -3px -3px 5px #FFFFFF, 5px 5px 10px #A8B1D6;
+          box-shadow: -3px -3px 5px #FFFFFF, 5px 5px 10px #A8B1D6;
   margin-right: 20px;
   margin-bottom: 20px;
   white-space: nowrap;
@@ -59,7 +64,7 @@ a {
   outline: none;
   -webkit-transition: 1s;
   transition: 1s;
-  color: var(--pink);
+  color: #e7068a;
 }
 
 a:hover {
@@ -70,8 +75,8 @@ a:hover {
 }
 
 a:active {
-  -webkit-box-shadow: var(--inner-shadow);
-          box-shadow: var(--inner-shadow);
+  -webkit-box-shadow: inset -5px -5px 4px #FFFFFF, inset 3px 3px 10px #A8B1D6;
+          box-shadow: inset -5px -5px 4px #FFFFFF, inset 3px 3px 10px #A8B1D6;
   -webkit-transform: translateY(2px);
           transform: translateY(2px);
   text-decoration: underline;
@@ -91,10 +96,6 @@ a:active {
   z-index: 99;
 }
 
-.new-tab {
-  cursor: url("assets/arrow-link.png"), auto;
-}
-
 .square-button {
   border-radius: 10px;
   max-height: 20px;
@@ -109,24 +110,6 @@ a:active {
 .navigation {
   margin-top: 5h;
   line-height: 75px;
-}
-
-h1 {
-  font-family: 'League Gothic', sans-serif;
-  font-size: 60px;
-  color: var(--blue);
-  margin: 0px;
-}
-
-h2 {
-  font-size: 25px;
-  margin-bottom: 0px;
-}
-
-p {
-  font-size: 20px;
-  font-weight: normal;
-  line-height: 25px;
 }
 
 .slide-up {
@@ -181,7 +164,7 @@ p {
   font-family: 'League Gothic', sans-serif;
   font-size: 8vw;
   line-height: 7vw;
-  color: var(--blue);
+  color: #1F4CFF;
 }
 
 .project {
@@ -214,7 +197,7 @@ p {
   margin-bottom: 0px;
 }
 
-.project-card-title > p {
+.project-card-title * p {
   font-size: 14px;
   text-align: right;
   line-height: 100%;
@@ -229,14 +212,14 @@ p {
 }
 
 .education {
-  background-color: var(--blue);
+  background-color: #1F4CFF;
   padding-top: 10vh;
   padding-bottom: 10vh;
   position: relative;
 }
 
 .education h1, .education h3, .education p {
-  color: var(--off-white);
+  color: #EBECF0;
 }
 
 .education-container {
@@ -287,11 +270,11 @@ p {
   padding: 5px 15px 5px 15px;
   border: none;
   border-radius: 50px;
-  background: var(--pink);
+  background: #e7068a;
   margin-top: 10px;
   margin-right: 5px;
   white-space: nowrap;
-  color: var(--off-white);
+  color: #EBECF0;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 15px;
   -webkit-user-select: none;
@@ -301,13 +284,13 @@ p {
 }
 
 .selected {
-  -webkit-box-shadow: var(--inner-shadow);
-          box-shadow: var(--inner-shadow);
+  -webkit-box-shadow: inset -5px -5px 4px #FFFFFF, inset 3px 3px 10px #A8B1D6;
+          box-shadow: inset -5px -5px 4px #FFFFFF, inset 3px 3px 10px #A8B1D6;
 }
 
 .selected:hover {
-  -webkit-box-shadow: var(--inner-shadow);
-          box-shadow: var(--inner-shadow);
+  -webkit-box-shadow: inset -5px -5px 4px #FFFFFF, inset 3px 3px 10px #A8B1D6;
+          box-shadow: inset -5px -5px 4px #FFFFFF, inset 3px 3px 10px #A8B1D6;
 }
 
 .unselectable {
@@ -361,18 +344,18 @@ p {
 }
 
 ::-moz-selection {
-  background: var(--selection);
-  color: var(--background);
+  background: black;
+  color: #EBECF0;
 }
 
 ::selection {
-  background: var(--selection);
-  color: var(--background);
+  background: black;
+  color: #EBECF0;
 }
 
 ::-moz-selection {
-  background: var(--selection);
-  color: var(--background);
+  background: black;
+  color: #EBECF0;
 }
 
 /* width */
@@ -389,7 +372,7 @@ p {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--scrollbar);
+  background: #1F4CFF;
   border-radius: 10px;
 }
 

@@ -1,64 +1,9 @@
-:root {
-    --blue:#1F4CFF;
-    --pink: #e7068a;
-    --off-white: #EBECF0;
-
-    --background: var(--off-white);
-    --button: var(--background);
-    --scrollbar: var(--blue);
-    --selection: black;
-    --paragraph: black;
-
-    --inner-shadow: inset -5px -5px 4px #FFFFFF, inset 3px 3px 10px #A8B1D6;
-    --drop-shadow: -5px -5px 5px #FFFFFF, 5px 5px 15px #A8B1D6;
-}
-
-$blue:#1F4CFF;
-$dark-blue: #011f94;
-$pink: #e7068a;
-$off-white: #EBECF0;
-
-html
-{
-    scroll-behavior: smooth;
-}
-
-body
-{
-    overflow-x: hidden;
-    padding: 0px;
-    margin: 0px;
-    background-color: var(--background);
-    color: var(--paragraph);
-
-    font-family: 'Source Sans Pro', sans-serif;
-    box-sizing: border-box;
-}
-
-h1
-{   
-    font-family: 'League Gothic', sans-serif;
-    font-size: 60px;
-    color: var(--blue);
-    margin: 0px;
-}
-
-h2
-{
-    font-size: 25px;
-    margin-bottom: 0px;
-}
+@import 'variables';
+@import 'global';
 
 .large
 {
     font-size: 6vw;
-}
-
-p
-{
-    font-size: 18px;
-    font-weight: normal;
-    line-height: 32px;
 }
 
 img
@@ -143,12 +88,12 @@ img
 }
 
 ::selection {
-    background: var(--selection);
-    color: var(--background);
+    background: $selection;
+    color: $background;
   }
 ::-moz-selection {
-    background: var(--selection);
-    color: var(--background);
+    background: $selection;
+    color: $background;
 }
 
 /* width */
@@ -165,7 +110,7 @@ img
   
   /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: var(--scrollbar);
+    background: $scrollbar;
     border-radius: 10px;
 }
   
