@@ -1,0 +1,169 @@
+:root {
+    --blue:#1F4CFF;
+    --pink: #e7068a;
+    --off-white: #EBECF0;
+
+    --background: var(--off-white);
+    --button: var(--background);
+    --scrollbar: var(--blue);
+    --selection: black;
+    --paragraph: black;
+
+    --inner-shadow: inset -5px -5px 4px #FFFFFF, inset 3px 3px 10px #A8B1D6;
+    --drop-shadow: -5px -5px 5px #FFFFFF, 5px 5px 15px #A8B1D6;
+}
+
+$blue:#1F4CFF;
+$dark-blue: #011f94;
+$pink: #e7068a;
+$off-white: #EBECF0;
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+body
+{
+    overflow-x: hidden;
+    padding: 0px;
+    margin: 0px;
+    background-color: var(--background);
+    color: var(--paragraph);
+
+    font-family: 'Source Sans Pro', sans-serif;
+    box-sizing: border-box;
+}
+
+h1
+{   
+    font-family: 'League Gothic', sans-serif;
+    font-size: 60px;
+    color: var(--blue);
+    margin: 0px;
+}
+
+h2
+{
+    font-size: 25px;
+    margin-bottom: 0px;
+}
+
+.large
+{
+    font-size: 8vw;
+}
+
+p
+{
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 32px;
+}
+
+img
+{
+    max-width: 50vw;
+}
+
+.bluemode
+{
+    background-color: $blue;
+    h1, h2, h3, p, ul, li
+    {
+        color: $off-white;
+    }
+}
+
+.section 
+{
+    margin-left: 10vw;
+}
+
+.section-break
+{
+    min-height: 10vh;
+}
+
+.columns
+{
+    display: flex;
+    orientation: column;
+}
+
+.text-break
+{
+    min-height: 3vh;
+}
+
+.tight
+{
+    max-width: 60vw;
+}
+
+.wide
+{
+    max-width: 80vw;
+}
+
+.right
+{
+    text-align: right;
+}
+
+.center
+{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-center
+{
+    text-align: center;
+}
+
+.quote
+{
+    border-left: 1px solid $off-white;
+    padding-left: 20px;
+    font-style: italic;
+}
+
+@media (max-width: 991px){
+    .tight
+    {
+        max-width: 80vw;
+    }
+}
+
+::selection {
+    background: var(--selection);
+    color: var(--background);
+  }
+::-moz-selection {
+    background: var(--selection);
+    color: var(--background);
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+    background: #888;
+}
+  
+  /* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+  
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar);
+    border-radius: 10px;
+}
+  
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

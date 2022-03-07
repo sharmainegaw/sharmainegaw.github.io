@@ -1,0 +1,405 @@
+:root {
+    --blue:#1F4CFF;
+    --pink: #e7068a;
+    --off-white: #EBECF0;
+
+    --background: var(--off-white);
+    --button: var(--background);
+    --scrollbar: var(--blue);
+    --selection: black;
+    --paragraph: black;
+
+    --inner-shadow: inset -5px -5px 4px #FFFFFF, inset 3px 3px 10px #A8B1D6;
+    --drop-shadow: -5px -5px 5px #FFFFFF, 5px 5px 15px #A8B1D6;
+}
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+body
+{
+    overflow-x: hidden;
+    padding: 0px;
+    margin: 0px;
+    background-color: var(--background);
+    color: var(--paragraph);
+
+    font-family: 'Source Sans Pro', sans-serif;
+    box-sizing: border-box;
+}
+
+.container
+{
+    min-height: 100vh;
+    background-color: var(--background);
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.anchor
+{
+    min-height: 20px;
+}
+
+a
+{
+    width:fit-content;
+    padding: 15px 25px 15px 25px;
+    border: none;
+    border-radius: 50px;
+    background: var(--button);
+    box-shadow: var(--drop-shadow);
+    margin-right: 20px;
+    margin-bottom: 20px;
+    white-space: nowrap;
+
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+    transition: 1s;
+    color: var(--pink);
+}
+
+a:hover
+{
+    transition: 0.25s;
+    box-shadow: none;
+}
+
+a:active
+{
+    box-shadow: var(--inner-shadow);
+    transform: translateY(2px);
+    text-decoration: underline;
+}
+
+.img-container {
+    position: relative;
+}
+  
+.img-container:after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.new-tab
+{
+    cursor: url('assets/arrow-link.png'), auto;
+}
+
+.square-button
+{
+    border-radius: 10px;
+    max-height: 20px;
+    max-width: 20px;
+}
+
+.img-icon
+{
+    height: 16px;
+    width: 16px;
+}
+
+.navigation
+{
+    margin-top: 5h;
+    line-height: 75px;
+}
+
+h1
+{   
+    font-family: 'League Gothic', sans-serif;
+    font-size: 60px;
+    color: var(--blue);
+    margin: 0px;
+}
+
+h2
+{
+    font-size: 25px;
+    margin-bottom: 0px;
+}
+
+p
+{
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 25px;
+}
+
+.slide-up
+{   
+    transform: translateY(30%);
+    opacity: 0;
+    transition: 1s;
+}
+
+.slide-up.active
+{
+    opacity: 1;
+    transform: translateY(0%);
+}
+
+
+.section
+{
+    margin-top: 5vh;
+    margin-bottom:10vh;
+    max-width: 50vw;
+    margin-left: 15vw;
+}
+
+.hero-container
+{
+    display: flex;
+    align-items: center;
+    margin-top: 20vh;
+    margin-left: 15vw;
+    margin-right: 15vw;
+}
+
+.hero-text
+{
+    min-width: 35vw;
+}
+
+.hero-image
+{
+    display:block;
+    max-width:30;
+    max-height:25vw;
+    object-fit: cover;
+    width: auto;
+    height: auto;
+}
+
+.hero-title
+{
+    min-height: 8vw;
+    font-family: 'League Gothic', sans-serif;
+    font-size: 8vw;
+    line-height: 7vw;
+    color: var(--blue);
+}
+
+.project
+{
+    display: grid;
+    grid-template-columns: 35vw 35vw;
+    column-gap: 3vw;
+}
+
+.project-card
+{
+    margin-right: 40px;
+    margin-top: 60px;
+}
+
+.project-card-title
+{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.project-card-title *
+{
+    margin-bottom: 0px;
+}
+
+.project-card-title > p
+{
+    font-size: 14px;
+    text-align: right;
+    line-height: 100%;
+}
+
+.project-image
+{
+    border-radius: 10px;
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.education
+{
+    background-color: var(--blue);
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    position: relative;
+    
+}
+
+.education h1, .education h3, .education p
+{
+    color: var(--off-white);
+}
+
+.education-container
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.education-image
+{
+    max-width: 45vw;
+    max-height: 45vw;
+    object-fit: cover;
+    width: auto;
+    height: auto;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: -15vw;
+}
+
+.contact-container
+{
+    margin-top: 15vh;
+    margin-bottom: 10vh;
+    max-width: 85vw;
+    margin-left:auto;
+    margin-right: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chip
+{
+    display: inline-block;
+    width:fit-content;
+    padding: 5px 15px 5px 15px;
+    border: none;
+    border-radius: 50px;
+    background: var(--pink);
+    margin-top: 10px;
+    margin-right: 5px;
+    white-space: nowrap;
+    color: var(--off-white);
+
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 15px;
+    user-select: none;
+}
+
+.selected
+{
+    box-shadow: var(--inner-shadow);
+}
+
+.selected:hover
+{
+    box-shadow: var(--inner-shadow);
+}
+
+.unselectable {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+
+    -webkit-user-drag: none;
+}
+
+
+@media (max-width: 479) {
+    .hero-title
+    {
+        font-size: 10vw;
+    }
+
+    .education-image
+    {
+        display: none;
+    }
+}
+
+@media (max-width: 991px){
+    .project
+    {
+        display: grid;
+        grid-template-columns: 70vw;
+        column-gap: 3vw;
+    }
+
+    .section
+    {
+        min-width: 70vw;
+    }
+
+    .education-container, .contact-container, .project-card-title
+    {
+        flex-direction: column;
+    }
+
+    .education-container > p
+    {
+        margin-top: 5px;
+        text-align: right;
+    }
+
+    .contact-container
+    {
+        max-width: 70vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .education-image
+    {
+        display: none;
+    }
+
+}
+
+
+
+
+::selection {
+    background: var(--selection);
+    color: var(--background);
+  }
+::-moz-selection {
+    background: var(--selection);
+    color: var(--background);
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+    background: #888;
+}
+  
+  /* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+  
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar);
+    border-radius: 10px;
+}
+  
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

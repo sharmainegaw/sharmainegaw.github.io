@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="1.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Karla&display=swap" rel="stylesheet">
+
+    <title>Projects</title>
+
+</head>
+<body>
+    <div class="section project">
+        <h1>Other Projects</h1>
+        <br>
+        <div id="filters">
+            <a onclick="changeView(0)" class="selected">View all</a>
+            <a onclick="changeView(1)">UI/UX</a>
+            <a onclick="changeView(2)">Web Dev</a>
+            <a onclick="changeView(3)">3D</a>
+            <a onclick="changeView(4)">Research</a>
+            <!--<a onclick="changeView(5)">AI</a>-->
+        </div>
+
+        <div class="project-card">
+            <img src="/assets/canvas.png" class="image">
+            <h2>Canvas Redesign</h2>
+
+            <div class="chip" data-tag="1">UI/UX</div>
+            <div class="chip" data-tag="4">Research</div>
+
+            <h3>A case study on redesigning Canvas, one of the most popular e-learning platforms, and a close look on how to improve navigability, notifications, and assignment preparation. </h3>
+            <div class="navigation">
+                <a class="unselectable" href="canvas.html">➔</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="/assets/canvas.png" class="image">
+            <h2>LaSell++</h2>
+
+            <div class="chip" data-tag="2">Web Dev</div>
+            
+            <h3>Nyenyenye</h3>
+            <div class="navigation">
+                <a class="unselectable">➔</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="/assets/mangan.png" class="image">
+            <h2>Mangan-Tayon - a Filipino-centric cooking/recipe app</h2>
+            <div class="chip" data-tag="1">UI/UX</div>
+            <h3>awuw</h3>
+            <div class="navigation">
+                <a class="unselectable">➔</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="/assets/canvas.png" class="image">
+            <h2>Dethroneco</h2>
+
+            <div class="chip" data-tag="2">Web Dev</div>
+
+            <h3>Hi.</h3>
+            <div class="navigation">
+                <a class="unselectable">➔</a>
+            </div>
+        </div>
+
+        <!--<div class="project-card">
+            <h2>DSC-Taft's Online Recruitment Page</h2>
+            <h3>A one-page static website to recruit members for one of my orgs, Developer Student Club Taft.</h3>
+        </div>-->
+
+        <div class="project-card">
+            <h2>Online Chess UI (Neumorphism)</h2>
+            <h3>An attempt at one of the most popular trends in UI in 2020 - Neumorphism - on online chess.</h3>
+        </div>
+        
+        <div class="project-card">
+            <img src="/assets/nook.png" class="image">
+            <h2>Student's Nook - our org safespace</h2>
+
+            <div class="chip" data-tag="3">3D</div>
+
+            <h3>My earliest output after venturing into 3D modelling—an isometric 3D render of the Student's Nook, which is my home org's office-slash-safespace.</h3>
+        </div>
+        
+        <div class="project-card">
+            <img src="/assets/among us.png" class="image">
+            <h2>Among Us</h2>
+            
+            <div class="chip" data-tag="3">3D</div>
+
+            <h3>Another isometric 3D render of Among Us - electrical room.</h3>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    const projects = $(".project-card");
+    const chips = projects.children(".chip");
+
+    function changeView(number)
+    {
+        $("#filters").children().removeClass("selected");
+        $(event.target).addClass("selected");
+
+        projects.css("display", "none");
+        
+        if(number == 0)
+            projects.css("display", "block");
+        else
+            makeVisible(number);
+    }
+
+    function makeVisible(number)
+    {
+        for(i = 0; i < chips.length; i++)
+        {
+            if($(chips[i]).data("tag") == number)
+                $(chips[i]).parent().css("display", "block");
+        }
+    }
+    
+</script>
