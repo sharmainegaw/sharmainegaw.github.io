@@ -6,7 +6,7 @@
     --background: var(--off-white);
     --button: var(--background);
     --scrollbar: var(--blue);
-    --selection: var(--blue);
+    --selection: black;
     --paragraph: black;
 
     --inner-shadow: inset -5px -5px 4px #FFFFFF, inset 3px 3px 10px #A8B1D6;
@@ -20,6 +20,7 @@ html
 
 body
 {
+    overflow-x: hidden;
     padding: 0px;
     margin: 0px;
     background-color: var(--background);
@@ -77,6 +78,25 @@ a:active
     text-decoration: underline;
 }
 
+.img-container {
+    position: relative;
+}
+  
+.img-container:after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.new-tab
+{
+    cursor: url('assets/arrow-link.png'), auto;
+}
+
 .square-button
 {
     border-radius: 10px;
@@ -117,6 +137,20 @@ p
     line-height: 25px;
 }
 
+.slide-up
+{   
+    transform: translateY(30%);
+    opacity: 0;
+    transition: 1s;
+}
+
+.slide-up.active
+{
+    opacity: 1;
+    transform: translateY(0%);
+}
+
+
 .section
 {
     margin-top: 5vh;
@@ -129,7 +163,7 @@ p
 {
     display: flex;
     align-items: center;
-    margin-top: 25vh;
+    margin-top: 20vh;
     margin-left: 15vw;
     margin-right: 15vw;
 }
@@ -142,8 +176,8 @@ p
 .hero-image
 {
     display:block;
-    max-width:25vw;
-    max-height:20vw;
+    max-width:30;
+    max-height:25vw;
     object-fit: cover;
     width: auto;
     height: auto;
@@ -151,8 +185,10 @@ p
 
 .hero-title
 {
+    min-height: 8vw;
     font-family: 'League Gothic', sans-serif;
     font-size: 8vw;
+    line-height: 7vw;
     color: var(--blue);
 }
 
@@ -165,9 +201,27 @@ p
 
 .project-card
 {
-    margin-right: 30px;
-    margin-top: 40px;
-    margin-bottom: 70px;
+    margin-right: 40px;
+    margin-top: 60px;
+}
+
+.project-card-title
+{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.project-card-title *
+{
+    margin-bottom: 0px;
+}
+
+.project-card-title > p
+{
+    font-size: 14px;
+    text-align: right;
+    line-height: 100%;
 }
 
 .project-image
@@ -183,6 +237,8 @@ p
     background-color: var(--blue);
     padding-top: 10vh;
     padding-bottom: 10vh;
+    position: relative;
+    
 }
 
 .education h1, .education h3, .education p
@@ -194,6 +250,21 @@ p
 {
     display: flex;
     justify-content: space-between;
+}
+
+.education-image
+{
+    max-width: 45vw;
+    max-height: 45vw;
+    object-fit: cover;
+    width: auto;
+    height: auto;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: -15vw;
 }
 
 .contact-container
@@ -217,34 +288,14 @@ p
     border: none;
     border-radius: 50px;
     background: var(--pink);
-    margin-top: 20px;
-    margin-right: 10px;
+    margin-top: 10px;
+    margin-right: 5px;
     white-space: nowrap;
     color: var(--off-white);
 
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 15px;
     user-select: none;
-}
-
-
-
-#filters
-{
-    margin-top: 30px;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    margin-bottom: 50px;
-}
-
-#filters a
-{
-    padding: 10px 20px;
-}
-
-#filters a:active
-{
-    text-decoration: none;
 }
 
 .selected
@@ -263,6 +314,8 @@ p
     -webkit-user-select: none;
     -o-user-select: none;
     user-select: none;
+
+    -webkit-user-drag: none;
 }
 
 
@@ -270,6 +323,11 @@ p
     .hero-title
     {
         font-size: 10vw;
+    }
+
+    .education-image
+    {
+        display: none;
     }
 }
 
@@ -286,7 +344,7 @@ p
         min-width: 70vw;
     }
 
-    .education-container, .contact-container
+    .education-container, .contact-container, .project-card-title
     {
         flex-direction: column;
     }
@@ -303,6 +361,11 @@ p
         margin-left: auto;
         margin-right: auto;
     }
+    
+    .education-image
+    {
+        display: none;
+    }
 
 }
 
@@ -310,11 +373,11 @@ p
 
 
 ::selection {
-    background: var(--selection); /* WebKit/Blink Browsers */
+    background: var(--selection);
     color: var(--background);
   }
 ::-moz-selection {
-    background: var(--selection); /* Gecko Browsers */
+    background: var(--selection);
     color: var(--background);
 }
 
