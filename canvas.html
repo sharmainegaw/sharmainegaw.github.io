@@ -17,7 +17,7 @@
 </head>
 <body>
     <div class="bluemode">
-        <div class="section wide">
+        <div class="left-space wide">
             <div class="section-break"></div>
             <!-- <h1>Redesigning Canvas, an e-learning platform</h1> -->
             <!-- <i>
@@ -44,7 +44,7 @@
     </div>
 
     <div class="section-break"></div>
-    <div class="section wide">
+    <div class="left-space wide">
         <h1>Let’s get to work!</h1>
         <p>Although all of us in the team have first-hand experiences (and frustrations) of using Canvas, we conducted a needfinding study to find out what the problems are in Canvas through our users’ perspective. We first conducted an online survey which was answered by 106 people, and also held 12 interviews remotely to get to know how exactly different users use Canvas.</p>
 
@@ -210,4 +210,35 @@
 </html>
 
 <script>
+    function debounce(func, wait = 20, immediate = true) {
+	    var timeout;
+        return function() {
+            var context = this, args = arguments;
+            var later = function() {
+                timeout = null;
+                if (!immediate) func.apply(context, args);
+            };
+            var callNow = immediate && !timeout;
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+            if (callNow) func.apply(context, args);
+        };
+    };
+
+    const slideUpElements = $(".slide-up");
+
+    function slideIn(e) 
+    {
+        const currentPosition = window.scrollY + window.innerHeight;
+
+        slideUpElements.each(function(index, element){
+            const slideInAt = $(element).offset().top + ($(element).height()/10);
+            if(slideInAt < currentPosition)
+            {
+                $(element).addClass("active");
+            }
+        })
+    }
+
+    window.addEventListener('scroll', debounce(slideIn));
 </script>
