@@ -35,3 +35,48 @@ p
     font-weight: normal;
     line-height: 25px;
 }
+
+.slide-up
+{   
+    transform: translateY(30%);
+    opacity: 0;
+    transition: 1s;
+}
+
+.slide-up.active
+{
+    opacity: 1;
+    transform: translateY(0%);
+}
+
+::selection {
+    background: $selection;
+    color: $background;
+  }
+::-moz-selection {
+    background: $selection;
+    color: $background;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+    background: #888;
+}
+  
+  /* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+  
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: $scrollbar;
+    border-radius: 10px;
+}
+  
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

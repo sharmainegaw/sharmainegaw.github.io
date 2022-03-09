@@ -31,6 +31,58 @@ p {
   line-height: 25px;
 }
 
+.slide-up {
+  -webkit-transform: translateY(30%);
+          transform: translateY(30%);
+  opacity: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.slide-up.active {
+  opacity: 1;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+}
+
+::-moz-selection {
+  background: black;
+  color: #EBECF0;
+}
+
+::selection {
+  background: black;
+  color: #EBECF0;
+}
+
+::-moz-selection {
+  background: black;
+  color: #EBECF0;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+  background: #888;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #1F4CFF;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 .container {
   min-height: 100vh;
   background-color: #EBECF0;
@@ -110,20 +162,6 @@ a:active {
 .navigation {
   margin-top: 5h;
   line-height: 75px;
-}
-
-.slide-up {
-  -webkit-transform: translateY(30%);
-          transform: translateY(30%);
-  opacity: 0;
-  -webkit-transition: 1s;
-  transition: 1s;
-}
-
-.slide-up.active {
-  opacity: 1;
-  -webkit-transform: translateY(0%);
-          transform: translateY(0%);
 }
 
 .section {
@@ -211,15 +249,18 @@ a:active {
      object-fit: cover;
 }
 
-.education {
+.bluemode {
   background-color: #1F4CFF;
+}
+
+.bluemode * {
+  color: #EBECF0;
+}
+
+.education {
   padding-top: 10vh;
   padding-bottom: 10vh;
   position: relative;
-}
-
-.education h1, .education h3, .education p {
-  color: #EBECF0;
 }
 
 .education-container {
@@ -341,43 +382,5 @@ a:active {
   .education-image {
     display: none;
   }
-}
-
-::-moz-selection {
-  background: black;
-  color: #EBECF0;
-}
-
-::selection {
-  background: black;
-  color: #EBECF0;
-}
-
-::-moz-selection {
-  background: black;
-  color: #EBECF0;
-}
-
-/* width */
-::-webkit-scrollbar {
-  width: 7px;
-  height: 7px;
-  background: #888;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #1F4CFF;
-  border-radius: 10px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
 }
 /*# sourceMappingURL=home.css.map */

@@ -82,20 +82,6 @@ a
     line-height: 75px;
 }
 
-.slide-up
-{   
-    transform: translateY(30%);
-    opacity: 0;
-    transition: 1s;
-}
-
-.slide-up.active
-{
-    opacity: 1;
-    transform: translateY(0%);
-}
-
-
 .section
 {
     margin-top: 5vh;
@@ -176,18 +162,21 @@ a
     object-fit: cover;
 }
 
-.education
+
+.bluemode
 {
     background-color: $blue;
+    * 
+    {
+        color: $off-white;
+    }
+}
+
+.education
+{
     padding-top: 10vh;
     padding-bottom: 10vh;
     position: relative;
-    
-}
-
-.education h1, .education h3, .education p
-{
-    color: $off-white;
 }
 
 .education-container
@@ -310,40 +299,4 @@ a
     {
         display: none;
     }
-
-}
-
-
-
-
-::selection {
-    background: $selection;
-    color: $background;
-  }
-::-moz-selection {
-    background: $selection;
-    color: $background;
-}
-
-/* width */
-::-webkit-scrollbar {
-    width: 7px;
-    height: 7px;
-    background: #888;
-}
-  
-  /* Track */
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
-}
-  
-  /* Handle */
-::-webkit-scrollbar-thumb {
-    background: $scrollbar;
-    border-radius: 10px;
-}
-  
-  /* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #555;
 }
