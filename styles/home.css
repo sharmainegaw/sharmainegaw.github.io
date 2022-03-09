@@ -15,20 +15,19 @@ body {
 
 h1 {
   font-family: 'League Gothic', sans-serif;
-  font-size: 60px;
+  font-size: clamp(4rem, 2.5vw, 6rem);
   color: #1F4CFF;
   margin: 0px;
 }
 
 h2 {
-  font-size: 25px;
+  font-size: clamp(1.8rem, 1vw, 2.2rem);
   margin-bottom: 0px;
 }
 
 p {
-  font-size: 18px;
+  font-size: clamp(1.2rem, 1vw, 1.5rem);
   font-weight: normal;
-  line-height: 25px;
 }
 
 .slide-up {
@@ -110,7 +109,7 @@ a {
   white-space: nowrap;
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: bold;
-  font-size: 18px;
+  font-size: clamp(1.2rem, 1vw, 1.5rem);
   text-decoration: none;
   cursor: pointer;
   outline: none;
@@ -231,16 +230,6 @@ a:active {
           justify-content: space-between;
 }
 
-.project-card-title * {
-  margin-bottom: 0px;
-}
-
-.project-card-title * p {
-  font-size: 14px;
-  text-align: right;
-  line-height: 100%;
-}
-
 .project-image {
   border-radius: 10px;
   width: 100%;
@@ -344,9 +333,6 @@ a:active {
 }
 
 @media (max-width: 479) {
-  .hero-title {
-    font-size: 10vw;
-  }
   .education-image {
     display: none;
   }

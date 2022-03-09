@@ -3,12 +3,12 @@
 
 .large
 {
-    font-size: 6vw;
+    font-size: $fs-xl;
 }
 
 img
 {
-    max-width: 50vw;
+    max-width: 35vw;
     border-radius: 10px;
 }
 
@@ -24,6 +24,11 @@ img
 .left-space
 {
     margin-left: 10vw;
+}
+
+.right-space
+{
+    margin-left: 55vw;
 }
 
 .section-break
@@ -42,7 +47,12 @@ img
     min-height: 3vh;
 }
 
-.tight
+.tight 
+{
+    max-width: 40vw;
+}
+
+.normal
 {
     max-width: 60vw;
 }
@@ -70,9 +80,15 @@ img
 
 .quote
 {
-    border-left: 1px solid $off-white;
+    border-left: 1px solid $blue;
     padding-left: 20px;
     font-style: italic;
+}
+
+@mixin align-center
+{
+    display: flex;
+    align-items: center;
 }
 
 .parallax_wrapper
@@ -86,11 +102,13 @@ img
     {
         position: relative;
         transform-style: preserve-3d;
+        min-height: 100vh;
 
         .parallax_layer
         {
             position: absolute;
             inset: 0;
+            @include align-center;
         }
 
         .base_layer
@@ -109,6 +127,7 @@ img
     .static
     {
         z-index: 0;
+        @include align-center;
     }
 
     .nonstatic
@@ -117,13 +136,29 @@ img
     }
 }
 
+.parallax_wrapper
+{
+    display: block;
+}
+
+.not-parallax
+{
+    display: none;
+}
+
 @media (max-width: 991px){
-    .large
+
+    .parallax_wrapper
     {
-        font-size: 60px;
+        display: none;
     }
 
-    .tight
+    .not-parallax
+    {
+        display: block;
+    }
+
+    .tight, .normal
     {
         max-width: 80vw;
     }

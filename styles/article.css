@@ -15,20 +15,19 @@ body {
 
 h1 {
   font-family: 'League Gothic', sans-serif;
-  font-size: 60px;
+  font-size: clamp(4rem, 2.5vw, 6rem);
   color: #1F4CFF;
   margin: 0px;
 }
 
 h2 {
-  font-size: 25px;
+  font-size: clamp(1.8rem, 1vw, 2.2rem);
   margin-bottom: 0px;
 }
 
 p {
-  font-size: 18px;
+  font-size: clamp(1.2rem, 1vw, 1.5rem);
   font-weight: normal;
-  line-height: 25px;
 }
 
 .slide-up {
@@ -84,11 +83,11 @@ p {
 }
 
 .large {
-  font-size: 6vw;
+  font-size: clamp(3.5rem, 7vw, 10rem);
 }
 
 img {
-  max-width: 50vw;
+  max-width: 35vw;
   border-radius: 10px;
 }
 
@@ -102,6 +101,10 @@ img {
 
 .left-space {
   margin-left: 10vw;
+}
+
+.right-space {
+  margin-left: 55vw;
 }
 
 .section-break {
@@ -120,6 +123,10 @@ img {
 }
 
 .tight {
+  max-width: 40vw;
+}
+
+.normal {
   max-width: 60vw;
 }
 
@@ -141,7 +148,7 @@ img {
 }
 
 .quote {
-  border-left: 1px solid #EBECF0;
+  border-left: 1px solid #1F4CFF;
   padding-left: 20px;
   font-style: italic;
 }
@@ -158,11 +165,18 @@ img {
   position: relative;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
+  min-height: 100vh;
 }
 
 .parallax_wrapper .parallax_group .parallax_layer {
   position: absolute;
   inset: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .parallax_wrapper .parallax_group .base_layer {
@@ -179,17 +193,34 @@ img {
 
 .parallax_wrapper .static {
   z-index: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .parallax_wrapper .nonstatic {
   z-index: 1;
 }
 
+.parallax_wrapper {
+  display: block;
+}
+
+.not-parallax {
+  display: none;
+}
+
 @media (max-width: 991px) {
-  .large {
-    font-size: 60px;
+  .parallax_wrapper {
+    display: none;
   }
-  .tight {
+  .not-parallax {
+    display: block;
+  }
+  .tight, .normal {
     max-width: 80vw;
   }
   img {

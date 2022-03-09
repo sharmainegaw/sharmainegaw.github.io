@@ -18,22 +18,21 @@ body
 h1
 {   
     font-family: 'League Gothic', sans-serif;
-    font-size: 60px;
+    font-size: $fs-600;
     color: $blue;
     margin: 0px;
 }
 
 h2
 {
-    font-size: 25px;
+    font-size: $fs-500;
     margin-bottom: 0px;
 }
 
 p
 {
-    font-size: 18px;
+    font-size: $fs-400;
     font-weight: normal;
-    line-height: 25px;
 }
 
 .slide-up

@@ -28,7 +28,7 @@ a
 
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: bold;
-    font-size: 18px;
+    font-size: $fs-400;
     text-decoration: none;
     cursor: pointer;
     outline: none;
@@ -143,17 +143,6 @@ a
     justify-content: space-between;
 }
 
-.project-card-title *
-{
-    margin-bottom: 0px;
-    p 
-    {
-        font-size: 14px;
-        text-align: right;
-        line-height: 100%;
-    }
-}
-
 .project-image
 {
     border-radius: 10px;
@@ -253,11 +242,6 @@ a
 
 
 @media (max-width: 479) {
-    .hero-title
-    {
-        font-size: 10vw;
-    }
-
     .education-image
     {
         display: none;

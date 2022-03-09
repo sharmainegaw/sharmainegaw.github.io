@@ -2,6 +2,11 @@ $blue:#1F4CFF;
 $pink: #e7068a;
 $off-white: #EBECF0;
 
+$fs-xl: clamp(3.5rem, 7vw, 10rem);
+$fs-600: clamp(4rem, 2.5vw, 6rem);
+$fs-500: clamp(1.8rem, 1vw, 2.2rem);
+$fs-400: clamp(1.2rem, 1vw, 1.5rem);
+
 $background: $off-white;
 $button: $background;
 $scrollbar: $blue;
