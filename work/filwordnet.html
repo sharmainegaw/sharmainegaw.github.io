@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="/./styles/article.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <title>FilWordNet Annotation Tool</title>
+
+</head>
+<body>
+    <!-- <main class="not-parallax"> -->
+    <main>
+        <div class="normal center page">
+            <div>
+                <br class="large">
+                <h1>One part of our thesis required us to gather annotations from volunteers.</h1>
+                <p>To help speed up the process, we built an annotation tool, where volunteers would be grouping together sentences based on the meaning (or sense) of a certain word in the sentence.</p>
+
+                <p>I handled most of the development. Its basic features are being able to sign up, log in, create annotations, and log out. We used NextJS for the front-end and back-end, MongoDB for the database, and Vercel for deployment. The design is kept simple as people of different age groups will be using the tool.</p>
+                <br class="large">
+            </div>
+        </div>
+        
+        <div class="bluemode">
+            <div class="normal center slide-up">
+                <br class="large">
+                <p>The landing page is kept simple as the people who would have access to the website will already  have been briefed about the project.</p>
+                <br class="small">
+    
+                <div class="text-center">
+                    <img src="/./assets/filwordnet/landing.png"/>
+                    <br>
+                    <small>Landing page.</small>
+                </div>
+            </div>
+    
+            <br class="small">
+    
+            <div class="normal center slide-up">
+                <p>Form validation is implemented on the register and login screen.</p>
+                <br class="small">
+    
+                <div class="text-center">
+                    <img src="/./assets/filwordnet/registration.png"/>
+                    <img src="/./assets/filwordnet/login - error.png"/>
+                    <br>
+                    <small>Registration page and log in page with an error.</small>
+                </div>
+            </div>
+                
+            <br class="small">
+    
+            <div class="normal center slide-up">
+                <p>Upon logging in, the user is greeted with a list of all the words they would be annotating on their dashboard, represented as cards. They are colored green to notify the user that they’re done with the annotation task, and white otherwise.</p>
+                <br class="small">
+    
+                <div class="text-center">
+                    <img src="/./assets/filwordnet/dashboard.png"/>
+                    <br>
+                    <small>Dashboard page.</small>
+                </div>
+            </div>
+
+            <br class="small">
+    
+            <div class="normal center slide-up">
+                <p>When doing an annotation task, a kanban board-inspired screen is shown to the user. At the start, all ungrouped sentences are listed on the left side of the screen. Not all sentences are immediately shown to avoid overwhelming the user.</p>
+
+                <p>To move the cards, the user may drag and drop the card to whichever group they choose. As mentioned, the functionalities are similar to kanban boards like Trello so the user is familiar with them.</p>
+                <br class="small">
+    
+                <div class="text-center">
+                    <img src="/./assets/filwordnet/annotate.png"/>
+                    <br>
+                    <small>Annotate page.</small>
+                </div>
+            </div>
+            <br class="large">
+            <br class="large">
+        </div>
+    </main>
+</body>
+</html>
+
+<script>
+    function debounce(func, wait = 20, immediate = true) {
+	    var timeout;
+        return function() {
+            var context = this, args = arguments;
+            var later = function() {
+                timeout = null;
+                if (!immediate) func.apply(context, args);
+            };
+            var callNow = immediate && !timeout;
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+            if (callNow) func.apply(context, args);
+        };
+    };
+
+    const slideUpElements = $(".slide-up");
+
+    function slideIn(e) 
+    {
+        const currentPosition = window.scrollY + window.innerHeight;
+
+        slideUpElements.each(function(index, element){
+            // const slideInAt = $(element).offset().top + ($(element).height()/10);
+            const slideInAt = $(element).offset().top + 10;
+            if(slideInAt < currentPosition)
+            {
+                $(element).addClass("active");
+            }
+        })
+    }
+
+    window.addEventListener('scroll', debounce(slideIn));
+</script>
