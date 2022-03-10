@@ -1,0 +1,103 @@
+html
+{
+    scroll-behavior: smooth;
+}
+
+body
+{
+    overflow-x: hidden;
+    padding: 0px;
+    margin: 0px;
+    background-color: $background;
+    color: black;
+
+    font-family: 'Source Sans Pro', sans-serif;
+    box-sizing: border-box;
+}
+
+h1
+{   
+    font-family: 'League Gothic', sans-serif;
+    font-size: $fs-600;
+    color: $blue;
+    margin: 0px;
+}
+
+h2
+{
+    font-size: $fs-500;
+    margin-bottom: 0px;
+}
+
+p
+{
+    font-size: $fs-400;
+    font-weight: normal;
+}
+
+br
+{
+    display: block;
+    content: "";
+    margin-top: 0;
+}
+
+br.small
+{
+    min-height: 3vh;
+}
+
+br.large
+{
+    min-height: 10vh;
+}
+
+br.xl
+{
+    min-height: 35vh;
+}
+
+.slide-up
+{   
+    transform: translateY(30%);
+    opacity: 0;
+    transition: 1s;
+}
+
+.slide-up.active
+{
+    opacity: 1;
+    transform: translateY(0%);
+}
+
+::selection {
+    background: $selection;
+    color: $background;
+  }
+::-moz-selection {
+    background: $selection;
+    color: $background;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+    background: #888;
+}
+  
+  /* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+  
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: $scrollbar;
+    border-radius: 10px;
+}
+  
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
