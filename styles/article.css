@@ -99,6 +99,10 @@ img {
   color: #EBECF0;
 }
 
+.bluemode .quote {
+  border-left: 1px solid #EBECF0;
+}
+
 .left-space {
   margin-left: 10vw;
 }
@@ -153,7 +157,7 @@ img {
   font-style: italic;
 }
 
-.parallax_wrapper {
+.parallax-wrapper {
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
@@ -161,14 +165,14 @@ img {
           perspective: 300px;
 }
 
-.parallax_wrapper .parallax_group {
+.parallax-wrapper .parallax-group {
   position: relative;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
   min-height: 100vh;
 }
 
-.parallax_wrapper .parallax_group .parallax_layer {
+.parallax-wrapper .parallax-group .parallax-layer {
   position: absolute;
   inset: 0;
   display: -webkit-box;
@@ -179,19 +183,19 @@ img {
           align-items: center;
 }
 
-.parallax_wrapper .parallax_group .base_layer {
+.parallax-wrapper .parallax-group .base-layer {
   -webkit-transform: translateZ(0);
           transform: translateZ(0);
   z-index: 2;
 }
 
-.parallax_wrapper .parallax_group .top_layer {
+.parallax-wrapper .parallax-group .top-layer {
   -webkit-transform: translateZ(150px) scale(0.5);
           transform: translateZ(150px) scale(0.5);
   z-index: 1;
 }
 
-.parallax_wrapper .static {
+.parallax-wrapper .static {
   z-index: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -201,11 +205,11 @@ img {
           align-items: center;
 }
 
-.parallax_wrapper .nonstatic {
+.parallax-wrapper .nonstatic {
   z-index: 1;
 }
 
-.parallax_wrapper {
+.parallax-wrapper {
   display: block;
 }
 
@@ -213,8 +217,32 @@ img {
   display: none;
 }
 
+.page {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mobile-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 50vw;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+}
+
+.mobile-grid img {
+  max-width: 100%;
+  min-width: 0;
+}
+
 @media (max-width: 991px) {
-  .parallax_wrapper {
+  .parallax-wrapper {
     display: none;
   }
   .not-parallax {
