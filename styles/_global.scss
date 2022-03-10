@@ -35,6 +35,28 @@ p
     font-weight: normal;
 }
 
+br
+{
+    display: block;
+    content: "";
+    margin-top: 0;
+}
+
+br.small
+{
+    min-height: 3vh;
+}
+
+br.large
+{
+    min-height: 10vh;
+}
+
+br.xl
+{
+    min-height: 35vh;
+}
+
 .slide-up
 {   
     transform: translateY(30%);
