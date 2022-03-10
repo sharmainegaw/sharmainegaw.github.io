@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="/./styles/article.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <title>FilWordNet Annotation Tool</title>
+
+</head>
+<body>
+    <main class="not-parallax">
+        <div class="bluemode">
+            <br class="large">
+            <div class="normal center">
+
+                <p>One part of our thesis required us to gather annotations from volunteers. To help mitigate the process, we built an annotation tool, where volunteers would be grouping together sentences based on the meaning (or sense) of a certain word in the sentence. We used NextJS for the front-end and back-end, MongoDB for the database, and Vercel for deployment.</p>
+                                
+                <h1>One common problem I’ve encountered is coming up with grocery lists.</h1>
+    
+                <p>Although it seems like a simple task, some users may have to plan ahead, list dishes they would like to cook, look up the ingredients needed for each dish, and then finally list them down. I wanted to help simplify that process by designing an application creates a personal grocery list for users, depending on recipes they’ve chosen within the app.</p>
+
+                <p>Moreover, I also wanted to challenge myself to learn Figma’s richer features and to practice creating assets in Figma.<p>
+                
+                <p>Here are the features I took into consideration:</p>
+                <ul>
+                    <li><p>search for recipes</p></li>
+                    <li><p>add ingredients of recipes to the user’s grocery list</p></li>
+                    <li><p>filter the grocery list by dish</p></li>
+                </ul>
+            </div>
+            <br class="large">
+        </div>
+    
+        <div class="normal center slide-up">
+            <br class="large">
+            <h2>With that in mind, I first created a design system in Figma.</h2>
+    
+            <p>I chose dark green as the primary color to signify health and nature, and orange as the secondary color for food. I made use of Figma's variant feature to create variants of components such as cards, buttons, as well as icons on the navigation menu. The design system was continuously updated as needed throughout the prototyping process.</p>
+    
+            <br class="small">
+    
+            <div class="text-center">
+                <img src="assets/manang tomas/design system.png"/>
+                <br>
+                <small>Design system created in Figma.</small>
+            </div>
+            <br class="large">
+        </div>
+        
+        <div class="bluemode">
+            <div class="normal center slide-up">
+                <br class="large">
+                <p>The Home screen shows recipe categories as well as a few common dishes to catch the interest of users. The difficulty level and total time to cook each dish is also shown.</p>
+                <br class="small">
+    
+                <div class="text-center">
+                    <div class="mobile-grid center">
+                        <img src="assets/manang tomas/home.png"/>
+                        <img src="assets/manang tomas/search.png"/>
+                        <img src="assets/manang tomas/dish.png"/>
+                    </div>
+                    <br>
+                    <small>Home, Search, and Recipe screens.</small>
+                </div>
+            </div>
+    
+            <br class="large">
+    
+            <div class="normal center slide-up">
+                <p>Another screen is the Grocery List screen, which shows the ingredients of selected dishes, grouped by usual grocery store sections. An empty list is shown if no dishes have been selected yet.</p>
+                <br class="small">
+    
+                <div class="text-center">
+                    <div class="mobile-grid center">
+                        <img src="assets/manang tomas/grocery list - all.png"/>
+                        <img src="assets/manang tomas/grocery list - empty.png"/>
+                    </div>
+                    <br>
+                    <small>Grocery List screens.</small>
+                </div>
+            </div>
+                
+            <br class="large">
+    
+            <div class="normal center slide-up">
+                <p>While the user is shopping, ingredients can be ticked off using the checkbox to the left of the ingredient. Same ingredients common between dishes are also combined. Ingredients can also be filtered depending on which dishes are selected. This is inspired by the filtering system used in the “Your Library” section of Spotify.</p>
+                <br class="small">
+    
+                <div class="text-center">
+                    <div class="center">
+                        <img src="assets/manang tomas/grocery list - filtered.png"/>
+                    </div>
+                    <br>
+                    <small>Grocery List screen with filters on.</small>
+                </div>
+            </div>
+    
+            <div class="normal center slide-up">
+                <br class="large">
+    
+                <p>The Accounts screen is relatively simple. Preferences can also be found here. An option to switch check boxes to the right of the ingredients is also available, given that users may be holding something else while shopping.</p>
+                <br class="small">
+    
+                <div class="text-center">
+                    <div class="mobile-grid center">
+                        <img src="assets/manang tomas/grocery list - right.png"/>
+                        <img src="assets/manang tomas/account.png"/>
+                    </div>
+                    <br>
+                    <small>Grocery List screen with the check boxes on the right, and Accounts screen</small>
+                </div>
+            </div>
+                <br class="large">
+        </div>
+        <div class="normal center">
+            <br class="large">
+            <h1>Of course, as with all solutions, these can be improved.</h1>
+            <p>One way is to enable sharing grocery lists with other people, which may be useful for people who have housemates.</p>
+            <p>Overall, Figma provides rich features such as grids, auto layouts, components, and variants that makes prototyping a lot easier and allows designers to communicate their solutions effectively.</p>
+            <br class="large">
+        </div>
+    </main>
+</body>
+</html>
+
+<script>
+    function debounce(func, wait = 20, immediate = true) {
+	    var timeout;
+        return function() {
+            var context = this, args = arguments;
+            var later = function() {
+                timeout = null;
+                if (!immediate) func.apply(context, args);
+            };
+            var callNow = immediate && !timeout;
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+            if (callNow) func.apply(context, args);
+        };
+    };
+
+    const slideUpElements = $(".slide-up");
+
+    function slideIn(e) 
+    {
+        const currentPosition = window.scrollY + window.innerHeight;
+
+        slideUpElements.each(function(index, element){
+            // const slideInAt = $(element).offset().top + ($(element).height()/10);
+            const slideInAt = $(element).offset().top + 10;
+            if(slideInAt < currentPosition)
+            {
+                $(element).addClass("active");
+            }
+        })
+    }
+
+    window.addEventListener('scroll', debounce(slideIn));
+</script>
