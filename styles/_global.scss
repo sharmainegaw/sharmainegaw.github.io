@@ -60,6 +60,118 @@ br.xl
     min-height: 35vh;
 }
 
+footer
+{
+    margin-top: 15vh;
+    margin-bottom: 10vh;
+    max-width: 85vw;
+    margin-left:auto;
+    margin-right: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img
+    {
+        border-radius: 0px;
+    }
+}
+
+.link
+{
+    border-bottom: 2px solid $pink;
+    padding-bottom: 0px;
+    font-size: $fs-400;
+    text-decoration: none;
+    color: $pink;
+    transition: 0.25s;
+
+    &:hover
+    {
+        border-bottom: 2px solid $pink;
+        padding-bottom: 3px;
+        transition: 0.25s;
+    }
+}
+
+.bluemode
+{
+    .link
+    {
+        color: $off-white;
+        border-bottom: 2px solid $off-white;
+
+        &:hover
+        {
+            border-bottom: 2px solid $off-white;
+        }
+    }
+}
+
+.button
+{
+    width:fit-content;
+    padding: 15px 25px 15px 25px;
+    border: none;
+    border-radius: 50px;
+    background: $button;
+    box-shadow: $drop-shadow;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    white-space: nowrap;
+
+    font-weight: bold;
+    font-size: $fs-400;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+    transition: 1s;
+    color: $pink;
+
+    &:hover
+    {
+        transition: 0.25s;
+        box-shadow: none;
+    }
+
+    &:active 
+    {
+        box-shadow: $inner-shadow;
+        transform: translateY(2px);
+        text-decoration: underline;
+    }
+}
+
+.navigation
+{
+    margin-top: 5h;
+    line-height: 75px;
+}
+
+.square-button
+{
+    border-radius: 10px;
+    max-height: 20px;
+    max-width: 20px;
+}
+
+.img-icon
+{
+    height: 16px;
+    width: 16px;
+}
+
+.unselectable {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+
+    -webkit-user-drag: none;
+}
+
 .slide-up
 {   
     transform: translateY(30%);
