@@ -127,7 +127,6 @@ a {
   margin-right: 20px;
   margin-bottom: 20px;
   white-space: nowrap;
-  font-family: 'Source Sans Pro', sans-serif;
   font-weight: bold;
   font-size: clamp(1.2rem, 1vw, 1.5rem);
   text-decoration: none;
@@ -151,6 +150,34 @@ a:active {
   -webkit-transform: translateY(2px);
           transform: translateY(2px);
   text-decoration: underline;
+}
+
+.skills-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.skills-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (50px)[auto-fit];
+      grid-template-columns: repeat(auto-fit, 50px);
+  -webkit-column-gap: 5vw;
+          column-gap: 5vw;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+.skill .img-icon {
+  min-width: 50px;
+  height: auto;
 }
 
 .img-container {
@@ -197,7 +224,7 @@ a:active {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 20vh;
+  margin-top: 15vh;
   margin-left: 15vw;
   margin-right: 15vw;
 }
