@@ -11,115 +11,74 @@
 
 </head>
 <body>
-    <main class="not-parallax">
-        <div class="bluemode">
-            <br class="large">
-            <div class="normal center">
+    <!-- <main class="not-parallax"> -->
+    <main>
+        <div class="normal center page">
+            <div>
+                <br class="large">
+                <h1>One part of our thesis required us to gather annotations from volunteers.</h1>
+                <p>To help speed up the process, we built an annotation tool, where volunteers would be grouping together sentences based on the meaning (or sense) of a certain word in the sentence.</p>
 
-                <p>One part of our thesis required us to gather annotations from volunteers. To help mitigate the process, we built an annotation tool, where volunteers would be grouping together sentences based on the meaning (or sense) of a certain word in the sentence. We used NextJS for the front-end and back-end, MongoDB for the database, and Vercel for deployment.</p>
-                                
-                <h1>One common problem I’ve encountered is coming up with grocery lists.</h1>
-    
-                <p>Although it seems like a simple task, some users may have to plan ahead, list dishes they would like to cook, look up the ingredients needed for each dish, and then finally list them down. I wanted to help simplify that process by designing an application creates a personal grocery list for users, depending on recipes they’ve chosen within the app.</p>
-
-                <p>Moreover, I also wanted to challenge myself to learn Figma’s richer features and to practice creating assets in Figma.<p>
-                
-                <p>Here are the features I took into consideration:</p>
-                <ul>
-                    <li><p>search for recipes</p></li>
-                    <li><p>add ingredients of recipes to the user’s grocery list</p></li>
-                    <li><p>filter the grocery list by dish</p></li>
-                </ul>
+                <p>I handled most of the development. Its basic features are being able to sign up, log in, create annotations, and log out. We used NextJS for the front-end and back-end, MongoDB for the database, and Vercel for deployment. The design is kept simple as people of different age groups will be using the tool.</p>
+                <br class="large">
             </div>
-            <br class="large">
-        </div>
-    
-        <div class="normal center slide-up">
-            <br class="large">
-            <h2>With that in mind, I first created a design system in Figma.</h2>
-    
-            <p>I chose dark green as the primary color to signify health and nature, and orange as the secondary color for food. I made use of Figma's variant feature to create variants of components such as cards, buttons, as well as icons on the navigation menu. The design system was continuously updated as needed throughout the prototyping process.</p>
-    
-            <br class="small">
-    
-            <div class="text-center">
-                <img src="assets/manang tomas/design system.png"/>
-                <br>
-                <small>Design system created in Figma.</small>
-            </div>
-            <br class="large">
         </div>
         
         <div class="bluemode">
             <div class="normal center slide-up">
                 <br class="large">
-                <p>The Home screen shows recipe categories as well as a few common dishes to catch the interest of users. The difficulty level and total time to cook each dish is also shown.</p>
+                <p>The landing page is kept simple as the people who would have access to the website will already  have been briefed about the project.</p>
                 <br class="small">
     
                 <div class="text-center">
-                    <div class="mobile-grid center">
-                        <img src="assets/manang tomas/home.png"/>
-                        <img src="assets/manang tomas/search.png"/>
-                        <img src="assets/manang tomas/dish.png"/>
-                    </div>
+                    <img src="/./assets/filwordnet/landing.png"/>
                     <br>
-                    <small>Home, Search, and Recipe screens.</small>
+                    <small>Landing page.</small>
                 </div>
             </div>
     
-            <br class="large">
+            <br class="small">
     
             <div class="normal center slide-up">
-                <p>Another screen is the Grocery List screen, which shows the ingredients of selected dishes, grouped by usual grocery store sections. An empty list is shown if no dishes have been selected yet.</p>
+                <p>Form validation is implemented on the register and login screen.</p>
                 <br class="small">
     
                 <div class="text-center">
-                    <div class="mobile-grid center">
-                        <img src="assets/manang tomas/grocery list - all.png"/>
-                        <img src="assets/manang tomas/grocery list - empty.png"/>
-                    </div>
+                    <img src="/./assets/filwordnet/registration.png"/>
+                    <img src="/./assets/filwordnet/login - error.png"/>
                     <br>
-                    <small>Grocery List screens.</small>
+                    <small>Registration page and log in page with an error.</small>
                 </div>
             </div>
                 
-            <br class="large">
+            <br class="small">
     
             <div class="normal center slide-up">
-                <p>While the user is shopping, ingredients can be ticked off using the checkbox to the left of the ingredient. Same ingredients common between dishes are also combined. Ingredients can also be filtered depending on which dishes are selected. This is inspired by the filtering system used in the “Your Library” section of Spotify.</p>
+                <p>Upon logging in, the user is greeted with a list of all the words they would be annotating on their dashboard, represented as cards. They are colored green to notify the user that they’re done with the annotation task, and white otherwise.</p>
                 <br class="small">
     
                 <div class="text-center">
-                    <div class="center">
-                        <img src="assets/manang tomas/grocery list - filtered.png"/>
-                    </div>
+                    <img src="/./assets/filwordnet/dashboard.png"/>
                     <br>
-                    <small>Grocery List screen with filters on.</small>
+                    <small>Dashboard page.</small>
                 </div>
             </div>
+
+            <br class="small">
     
             <div class="normal center slide-up">
-                <br class="large">
-    
-                <p>The Accounts screen is relatively simple. Preferences can also be found here. An option to switch check boxes to the right of the ingredients is also available, given that users may be holding something else while shopping.</p>
+                <p>When doing an annotation task, a kanban board-inspired screen is shown to the user. At the start, all ungrouped sentences are listed on the left side of the screen. Not all sentences are immediately shown to avoid overwhelming the user.</p>
+
+                <p>To move the cards, the user may drag and drop the card to whichever group they choose. As mentioned, the functionalities are similar to kanban boards like Trello so the user is familiar with them.</p>
                 <br class="small">
     
                 <div class="text-center">
-                    <div class="mobile-grid center">
-                        <img src="assets/manang tomas/grocery list - right.png"/>
-                        <img src="assets/manang tomas/account.png"/>
-                    </div>
+                    <img src="/./assets/filwordnet/annotate.png"/>
                     <br>
-                    <small>Grocery List screen with the check boxes on the right, and Accounts screen</small>
+                    <small>Annotate page.</small>
                 </div>
             </div>
-                <br class="large">
-        </div>
-        <div class="normal center">
             <br class="large">
-            <h1>Of course, as with all solutions, these can be improved.</h1>
-            <p>One way is to enable sharing grocery lists with other people, which may be useful for people who have housemates.</p>
-            <p>Overall, Figma provides rich features such as grids, auto layouts, components, and variants that makes prototyping a lot easier and allows designers to communicate their solutions effectively.</p>
             <br class="large">
         </div>
     </main>
