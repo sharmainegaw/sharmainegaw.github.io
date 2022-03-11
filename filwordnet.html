@@ -2,20 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Personal website of Sharmaine Gaw">
+    <meta name="author" content="Sharmaine Gaw">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="styles/article.css">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
-    <title>FilWordNet Annotation Tool</title>
-
+    <title>Sharmaine Gaw - FilWordNet Annotation Tool</title>
 </head>
 <body>
     <main class="not-parallax">
         <div class="normal center page">
             <div>
                 <br class="large">
-                <a class="unselectable link" href="index.html#projects">🡸 Home</a>
+                <a class="unselectable link" href="index.html">🡸 Home</a>
                 <br class="small">
                 <h1>One part of our thesis required us to gather annotations from volunteers.</h1>
                 <p>To help speed up the process, we built an annotation tool, where volunteers would be grouping together sentences based on the meaning (or sense) of a certain word in the sentence.</p>
@@ -103,7 +104,7 @@
             <div class="normal center page">
                 <div>
                     <br class="large">
-                    <a class="unselectable link" href="index.html#projects">🡸 Home</a>
+                    <a class="unselectable link" href="index.html">🡸 Home</a>
                     <br class="small">
                     <h1>One part of our thesis required us to gather annotations from volunteers.</h1>
                     <p>To help speed up the process, we built an annotation tool, where volunteers would be grouping together sentences based on the meaning (or sense) of a certain word in the sentence.</p>
@@ -190,7 +191,7 @@
 </html>
 
 <script>
-    function debounce(func, wait = 20, immediate = true) {
+    function debounce(func, wait = 5, immediate = true) {
 	    var timeout;
         return function() {
             var context = this, args = arguments;
@@ -207,18 +208,25 @@
 
     const slideUpElements = $(".slide-up");
 
+    var scrollTimeout;
+
     function slideIn(e) 
     {
-        const currentPosition = window.scrollY + window.innerHeight;
+        clearTimeout(scrollTimeout);
 
-        slideUpElements.each(function(index, element){
-            // const slideInAt = $(element).offset().top + ($(element).height()/10);
-            const slideInAt = $(element).offset().top + 10;
-            if(slideInAt < currentPosition)
-            {
-                $(element).addClass("active");
-            }
-        })
+        scrollTimeout = setTimeout(function() {
+
+            console.log('hello');
+            const currentPosition = window.scrollY + window.innerHeight;
+
+            slideUpElements.each(function(index, element){
+                const slideInAt = $(element).offset().top + ($(element).height()/10);
+                if(slideInAt < currentPosition)
+                {
+                    $(element).addClass("active");
+                }
+            })
+        }, 100);
     }
 
     window.addEventListener('scroll', debounce(slideIn));

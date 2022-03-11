@@ -2,20 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Personal website of Sharmaine Gaw">
+    <meta name="author" content="Sharmaine Gaw">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="styles/article.css">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
-    <title>Redesigning Canvas, an e-learning platform</title>
-
+    <title>Sharmaine Gaw - Redesigning Canvas, an e-learning platform</title>
 </head>
 <body>
     <main class="not-parallax">
         <div class="bluemode">
             <div class="space-s wide">
                 <br class="large">
-                <a class="unselectable link" href="index.html#projects">🡸 Home</a>
+                <a class="unselectable link" href="index.html">🡸 Home</a>
                 <br class="small">
                 <!-- <h1>Redesigning Canvas, an e-learning platform</h1> -->
                 <!-- <i>
@@ -237,7 +238,7 @@
         <div class="parallax-group bluemode static">
             <div class="space-s wide">
                 <br class="large">
-                <a class="unselectable link" href="index.html#projects">🡸 Home</a>
+                <a class="unselectable link" href="index.html">🡸 Home</a>
                 <br class="small">
                 <!-- <h1>Redesigning Canvas, an e-learning platform</h1> -->
                 <!-- <i>
@@ -496,7 +497,7 @@
 </html>
 
 <script>
-    function debounce(func, wait = 20, immediate = true) {
+    function debounce(func, wait = 5, immediate = true) {
 	    var timeout;
         return function() {
             var context = this, args = arguments;
@@ -513,18 +514,25 @@
 
     const slideUpElements = $(".slide-up");
 
+    var scrollTimeout;
+
     function slideIn(e) 
     {
-        const currentPosition = window.scrollY + window.innerHeight;
+        clearTimeout(scrollTimeout);
 
-        slideUpElements.each(function(index, element){
-            // const slideInAt = $(element).offset().top + ($(element).height()/5);
-            const slideInAt = $(element).offset().top + 10;
-            if(slideInAt < currentPosition)
-            {
-                $(element).addClass("active");
-            }
-        })
+        scrollTimeout = setTimeout(function() {
+
+            console.log('hello');
+            const currentPosition = window.scrollY + window.innerHeight;
+
+            slideUpElements.each(function(index, element){
+                const slideInAt = $(element).offset().top + ($(element).height()/10);
+                if(slideInAt < currentPosition)
+                {
+                    $(element).addClass("active");
+                }
+            })
+        }, 100);
     }
 
     window.addEventListener('scroll', debounce(slideIn));
