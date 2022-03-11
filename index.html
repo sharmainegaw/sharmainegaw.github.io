@@ -2,25 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Personal website of Sharmaine Gaw">
+    <meta name="author" content="Sharmaine Gaw">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="assets/favicon.png">
     
     <link rel="stylesheet" href="styles/home.css">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <!-- <script>
-        loadCSS();
-    
-        function loadCSS() {
-            var sheet = document.createElement('link');
-            sheet.rel  = 'stylesheet';
-            sheet.href = (Math.floor(Math.random()*2)+1) + '.css';
-            console.log(sheet);
-            $("head").append(sheet);
-        }
-    </script> -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <title>Sharmaine</title>
+    <title>Sharmaine Gaw</title>
 </head>
 <body onload="onLoad()">
     <section class="container">⠀
@@ -254,7 +244,7 @@
         }
     }
 
-    function debounce(func, wait = 20, immediate = true) {
+    function debounce(func, wait = 5, immediate = true) {
 	    var timeout;
         return function() {
             var context = this, args = arguments;
@@ -271,17 +261,25 @@
 
     const slideUpElements = $(".slide-up");
 
+    var scrollTimeout;
+
     function slideIn(e) 
     {
-        const currentPosition = window.scrollY + window.innerHeight;
+        clearTimeout(scrollTimeout);
 
-        slideUpElements.each(function(index, element){
-            const slideInAt = $(element).offset().top + ($(element).height()/10);
-            if(slideInAt < currentPosition)
-            {
-                $(element).addClass("active");
-            }
-        })
+        scrollTimeout = setTimeout(function() {
+
+            console.log('hello');
+            const currentPosition = window.scrollY + window.innerHeight;
+
+            slideUpElements.each(function(index, element){
+                const slideInAt = $(element).offset().top + ($(element).height()/10);
+                if(slideInAt < currentPosition)
+                {
+                    $(element).addClass("active");
+                }
+            })
+        }, 100);
     }
 
     window.addEventListener('scroll', debounce(slideIn));
