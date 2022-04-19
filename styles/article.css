@@ -221,6 +221,10 @@ img {
   border-radius: 10px;
 }
 
+.design-system {
+  max-width: 80vw;
+}
+
 .bluemode {
   background-color: #1F4CFF;
 }
